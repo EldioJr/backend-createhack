@@ -5,10 +5,10 @@ import { AppModule } from './app.module.js';
 
 // Qualquer domínio ou subdomínio de gustagg.app (produção) — além disso, só
 // a URL única configurada em FRONTEND_URL (uso local/dev).
-const GUSTAGG_ORIGIN_PATTERN = /^https?:\/\/([a-z0-9-]+\.)*gustagg\.app(:\d+)?$/i;
+const EJ_ORIGIN_PATTERN = /^https?:\/\/([a-z0-9-]+\.)*ej\.dev(:\d+)?$/i;
 
 function isAllowedOrigin(origin: string): boolean {
-  if (GUSTAGG_ORIGIN_PATTERN.test(origin)) return true;
+  if (EJ_ORIGIN_PATTERN.test(origin)) return true;
   return origin === (process.env.FRONTEND_URL ?? 'http://localhost:5174');
 }
 
